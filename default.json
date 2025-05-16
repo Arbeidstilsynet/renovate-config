@@ -1,5 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "hostRules": [
+    {
+      "hostType": "nuget",
+      "matchHost": "pkgs.dev.azure.com",
+      "username": "any",
+      "password": "{{ secrets.AZDO_PAT_RENOVATE_NUGET }}"
+    }
+  ],
   "extends": [
     "config:best-practices",
     ":automergePatch",
