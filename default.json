@@ -1,0 +1,63 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":automergePatch",
+    ":automergeLinters",
+    ":automergeTesters",
+    ":automergeTypes",
+    ":automergeDigest",
+    "mergeConfidence:all-badges"
+  ],
+  "packageRules": [
+    {
+      "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
+      "matchPackageNames": ["coverlet.*", "Moq", "NUnit"],
+      "matchManagers": ["nuget"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true,
+      "groupName": ".NET Testing",
+      "description": "Automerge .NET testing packages"
+    },
+    { "matchPackageNames": ["typescript"], "automerge": true },
+    {
+      "matchPackageNames": [
+        "aws-sdk*",
+        "AWSSDK*",
+        "@aws-sdk/**",
+        "boto3",
+        "botocore"
+      ],
+      "groupName": "AWS SDK",
+      "description": "Group AWS SDK packages across languages and only update monthly to reduce noise",
+      "schedule": ["every 4th week on Saturday and Sunday"]
+    },
+    {
+      "matchPackageNames": ["Amazon.Lambda*"],
+      "matchManagers": ["nuget"],
+      "groupName": ".NET namespace Amazon.Lambda"
+    },
+    {
+      "matchPackageNames": ["AT.*", "Arkivering.Events*"],
+      "matchManagers": ["nuget"],
+      "groupName": ".NET namespace AT",
+      "description": ".NET packages in the AT namespace or that depend on AT.Common.Core"
+    },
+    {
+      "matchPackageNames": ["FluentAssertions"],
+      "matchManagers": ["nuget"],
+      "allowedVersions": "<8",
+      "description": "Prevent updates to FluentAssertions v8 or higher because of licensing changes"
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"],
+      "matchStrings": [
+        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+    }
+  ]
+}
