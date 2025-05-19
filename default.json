@@ -19,6 +19,11 @@
   ],
   "packageRules": [
     {
+      "matchUpdateTypes": ["pinDigest"],
+      "automerge": true,
+      "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests)"
+    },
+    {
       "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
       "matchPackageNames": ["coverlet.*", "Moq", "NUnit"],
       "matchManagers": ["nuget"],
