@@ -9,6 +9,7 @@
     ":automergeDigest",
     "mergeConfidence:all-badges"
   ],
+  "osvVulnerabilityAlerts": true,
   "packageRules": [
     {
       "matchUpdateTypes": ["pinDigest"],
