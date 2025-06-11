@@ -44,6 +44,16 @@
       "groupName": ".NET namespace Amazon.Lambda"
     },
     {
+      "matchPackageNames": ["Arbeidstilsynet.*"],
+      "matchManagers": ["nuget"],
+      "groupName": "Arbeidstilsynet namespace"
+    },
+    {
+      "matchPackageNames": ["@arbeidstilsynet/*"],
+      "matchManagers": ["npm"],
+      "groupName": "@arbeidstilsynet namespace"
+    },
+    {
       "matchPackageNames": ["AT.*", "Arkivering.Events*"],
       "matchManagers": ["nuget"],
       "groupName": ".NET namespace AT",
