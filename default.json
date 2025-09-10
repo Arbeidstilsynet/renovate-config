@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:best-practices",
-    ":automergePatch",
+    ":automergeMinor",
     ":automergeLinters",
     ":automergeTesters",
     ":automergeTypes",
@@ -10,6 +10,7 @@
     "mergeConfidence:all-badges"
   ],
   "osvVulnerabilityAlerts": true,
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
       "matchUpdateTypes": ["pinDigest"],
