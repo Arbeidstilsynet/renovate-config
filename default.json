@@ -19,14 +19,30 @@
     },
     {
       "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
-      "matchPackageNames": ["coverlet.*", "Moq", "NUnit"],
+      "matchPackageNames": [
+        "coverlet.*",
+        "Moq",
+        "NUnit",
+        "Microsoft.NET.Test.Sdk",
+        "NSubstitute",
+        "Bogus",
+        "Shouldly",
+        "Testcontainers*",
+        "WireMock*",
+        "Verify*",
+        "TngTech.ArchUnitNET*",
+        "xunit*"
+      ],
       "matchManagers": ["nuget"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "groupName": ".NET Testing",
       "description": "Automerge .NET testing packages"
     },
-    { "matchPackageNames": ["typescript"], "automerge": true },
+    {
+      "matchPackageNames": ["typescript"],
+      "automerge": true
+    },
     {
       "matchPackageNames": [
         "aws-sdk*",
