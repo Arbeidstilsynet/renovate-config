@@ -19,7 +19,20 @@
     },
     {
       "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
-      "matchPackageNames": ["coverlet.*", "Moq", "NUnit"],
+      "matchPackageNames": [
+        "coverlet.*", 
+        "Moq", 
+        "NUnit",  
+        "Microsoft.NET.Test.Sdk",
+        "NSubstitute",
+        "Bogus",
+        "Shouldly",
+        "Testcontainers*",
+        "WireMock*",
+        "Verify*",
+        "TngTech.ArchUnitNET*",
+        "xunit*"
+      ],
       "matchManagers": ["nuget"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
@@ -39,7 +52,7 @@
       "description": "Group AWS SDK packages across languages and only update monthly to reduce noise",
       "schedule": ["every 4th week on Saturday and Sunday"]
     },
-    {
+       {
       "matchPackageNames": ["Amazon.Lambda*"],
       "matchManagers": ["nuget"],
       "groupName": ".NET namespace Amazon.Lambda"
