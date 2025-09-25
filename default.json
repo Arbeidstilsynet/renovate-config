@@ -13,16 +13,21 @@
   "minimumReleaseAge": "3 days",
   "packageRules": [
     {
-      "matchUpdateTypes": ["pinDigest"],
+      "matchUpdateTypes": [
+        "pinDigest"
+      ],
       "automerge": true,
       "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests)"
     },
     {
-      "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
+      "extends": [
+        "monorepo:vstest",
+        "monorepo:xunit-dotnet"
+      ],
       "matchPackageNames": [
-        "coverlet.*", 
-        "Moq", 
-        "NUnit",  
+        "coverlet.*",
+        "Moq",
+        "NUnit",
         "Microsoft.NET.Test.Sdk",
         "NSubstitute",
         "Bogus",
@@ -33,13 +38,23 @@
         "TngTech.ArchUnitNET*",
         "xunit*"
       ],
-      "matchManagers": ["nuget"],
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchManagers": [
+        "nuget"
+      ],
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
       "automerge": true,
       "groupName": ".NET Testing",
       "description": "Automerge .NET testing packages"
     },
-    { "matchPackageNames": ["typescript"], "automerge": true },
+    {
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "automerge": true
+    },
     {
       "matchPackageNames": [
         "aws-sdk*",
@@ -50,32 +65,55 @@
       ],
       "groupName": "AWS SDK",
       "description": "Group AWS SDK packages across languages and only update monthly to reduce noise",
-      "schedule": ["every 4th week on Saturday and Sunday"]
+      "schedule": [
+        "every 4th week on Saturday and Sunday"
+      ]
     },
-       {
-      "matchPackageNames": ["Amazon.Lambda*"],
-      "matchManagers": ["nuget"],
+    {
+      "matchPackageNames": [
+        "Amazon.Lambda*"
+      ],
+      "matchManagers": [
+        "nuget"
+      ],
       "groupName": ".NET namespace Amazon.Lambda"
     },
     {
-      "matchPackageNames": ["Arbeidstilsynet.*"],
-      "matchManagers": ["nuget"],
+      "matchPackageNames": [
+        "Arbeidstilsynet.*"
+      ],
+      "matchManagers": [
+        "nuget"
+      ],
       "groupName": "Arbeidstilsynet namespace"
     },
     {
-      "matchPackageNames": ["@arbeidstilsynet/*"],
-      "matchManagers": ["npm"],
+      "matchPackageNames": [
+        "@arbeidstilsynet/*"
+      ],
+      "matchManagers": [
+        "npm"
+      ],
       "groupName": "@arbeidstilsynet namespace"
     },
     {
-      "matchPackageNames": ["AT.*", "Arkivering.Events*"],
-      "matchManagers": ["nuget"],
+      "matchPackageNames": [
+        "AT.*",
+        "Arkivering.Events*"
+      ],
+      "matchManagers": [
+        "nuget"
+      ],
       "groupName": ".NET namespace AT",
       "description": ".NET packages in the AT namespace or that depend on AT.Common.Core"
     },
     {
-      "matchPackageNames": ["FluentAssertions"],
-      "matchManagers": ["nuget"],
+      "matchPackageNames": [
+        "FluentAssertions"
+      ],
+      "matchManagers": [
+        "nuget"
+      ],
       "allowedVersions": "<8",
       "description": "Prevent updates to FluentAssertions v8 or higher because of licensing changes"
     }
@@ -83,7 +121,9 @@
   "customManagers": [
     {
       "customType": "regex",
-      "managerFilePatterns": ["/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"],
+      "managerFilePatterns": [
+        "/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"
+      ],
       "matchStrings": [
         "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
       ],
