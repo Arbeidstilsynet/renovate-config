@@ -30,6 +30,7 @@
         "WireMock.*",
         "Verify",
         "Verify.*",
+        "TngTech.ArchUnitNET",
         "TngTech.ArchUnitNET.*",
         "xunit",
         "xunit.*"
