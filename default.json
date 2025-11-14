@@ -19,20 +19,20 @@
       "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests)"
     },
     {
-      "extends": ["monorepo:vstest", "monorepo:xunit-dotnet"],
       "matchPackageNames": [
-        "coverlet.*",
-        "Moq",
-        "NUnit",
+        "coverlet.collector",
         "Microsoft.NET.Test.Sdk",
         "NSubstitute",
         "Bogus",
         "Shouldly",
-        "Testcontainers*",
-        "WireMock*",
-        "Verify*",
-        "TngTech.ArchUnitNET*",
-        "xunit*"
+        "Testcontainers",
+        "Testcontainers.*",
+        "WireMock.*",
+        "Verify",
+        "Verify.*",
+        "TngTech.ArchUnitNET.*",
+        "xunit",
+        "xunit.*"
       ],
       "matchManagers": ["nuget"],
       "matchUpdateTypes": ["minor", "patch"],
