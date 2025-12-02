@@ -9,7 +9,6 @@
     ":automergeDigest",
     "mergeConfidence:all-badges"
   ],
-  "osvVulnerabilityAlerts": true,
   "minimumReleaseAge": "3 days",
   "semanticCommits": "enabled",
   "packageRules": [
