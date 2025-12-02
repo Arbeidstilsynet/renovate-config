@@ -84,15 +84,5 @@
       "allowedVersions": "<8",
       "description": "Prevent updates to FluentAssertions v8 or higher because of licensing changes"
     }
-  ],
-  "customManagers": [
-    {
-      "customType": "regex",
-      "managerFilePatterns": ["/(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/"],
-      "matchStrings": [
-        "#\\s*renovate:\\s*datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=\"(?<currentValue>.*)\"\\s"
-      ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
-    }
   ]
 }
