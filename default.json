@@ -9,7 +9,9 @@
     ":automergeDigest",
     "mergeConfidence:all-badges"
   ],
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "96 hours",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
   "semanticCommits": "enabled",
   "packageRules": [
     {
