@@ -10,8 +10,6 @@
     "mergeConfidence:all-badges"
   ],
   "minimumReleaseAge": "96 hours",
-  "prCreation": "not-pending",
-  "internalChecksFilter": "strict",
   "semanticCommits": "enabled",
   "packageRules": [
     {
