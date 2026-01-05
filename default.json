@@ -10,8 +10,15 @@
     "mergeConfidence:all-badges"
   ],
   "minimumReleaseAge": "96 hours",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
   "semanticCommits": "enabled",
   "packageRules": [
+    {
+      "matchUpdateTypes": ["digest"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional",
+      "description": "Workaround for GitHub action digests without timestamps"
+    },
     {
       "matchUpdateTypes": ["pinDigest"],
       "automerge": true,
