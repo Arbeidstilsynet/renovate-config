@@ -11,6 +11,7 @@
   ],
   "minimumReleaseAge": "96 hours",
   "semanticCommits": "enabled",
+  "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
       "matchUpdateTypes": ["pinDigest"],
