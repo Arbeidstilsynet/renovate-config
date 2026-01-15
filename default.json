@@ -7,7 +7,8 @@
     ":automergeTesters",
     ":automergeTypes",
     ":automergeDigest",
-    "mergeConfidence:all-badges"
+    "mergeConfidence:all-badges",
+    "customManagers:dockerfileVersions"
   ],
   "minimumReleaseAge": "96 hours",
   "semanticCommits": "enabled",
