@@ -12,6 +12,7 @@
   ],
   "minimumReleaseAge": "96 hours",
   "semanticCommits": "enabled",
+  "osvVulnerabilityAlerts": true,
   "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
