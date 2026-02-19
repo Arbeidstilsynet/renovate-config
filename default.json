@@ -66,12 +66,16 @@
     {
       "matchPackageNames": ["Arbeidstilsynet.*"],
       "matchManagers": ["nuget"],
-      "groupName": "Arbeidstilsynet namespace"
+      "groupName": "Arbeidstilsynet namespace",
+      "description": "Group internal .NET packages and disable minimum release age",
+      "minimumReleaseAge": null
     },
     {
       "matchPackageNames": ["@arbeidstilsynet/*"],
       "matchManagers": ["npm"],
-      "groupName": "@arbeidstilsynet namespace"
+      "groupName": "@arbeidstilsynet namespace",
+      "description": "Group internal NPM packages and disable minimum release age",
+      "minimumReleaseAge": null
     },
     {
       "matchPackageNames": ["AT.*", "Arkivering.Events*"],
