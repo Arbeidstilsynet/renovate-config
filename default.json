@@ -74,8 +74,7 @@
       "matchPackageNames": ["@arbeidstilsynet/*"],
       "matchManagers": ["npm"],
       "groupName": "@arbeidstilsynet namespace",
-      "description": "Group internal NPM packages and disable minimum release age",
-      "minimumReleaseAge": null
+      "description": "Group internal NPM packages"
     },
     {
       "matchPackageNames": ["AT.*", "Arkivering.Events*"],
