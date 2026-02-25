@@ -48,6 +48,18 @@
       "description": "Automerge TS because it's a devDependency, doesn't follow semver, and errors will be caught by CI"
     },
     {
+      "matchPackageNames": [
+        "aws-sdk*",
+        "AWSSDK*",
+        "@aws-sdk/**",
+        "boto3",
+        "botocore"
+      ],
+      "groupName": "AWS SDK",
+      "schedule": ["every 4th week on Saturday and Sunday"],
+      "description": "Group AWS SDK packages across languages and only update monthly to reduce noise"
+    },
+    {
       "matchPackageNames": ["Arbeidstilsynet.*"],
       "matchManagers": ["nuget"],
       "groupName": ".NET Arbeidstilsynet namespace",
