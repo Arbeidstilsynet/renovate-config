@@ -87,6 +87,19 @@
       "matchManagers": ["nuget"],
       "allowedVersions": "<8",
       "description": "Prevent updates to FluentAssertions v8 or higher because of licensing changes"
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchSourceUrls": ["/^https:\\/\\/github.com\\/Arbeidstilsynet\\/.*$/"],
+      "minimumReleaseAge": null
+    },
+    {
+      "matchPackageNames": [
+        "Arbeidstilsynet.Receiver",
+        "/^.*meldinger\\/receiver$/"
+      ],
+      "matchManagers": ["kubernetes", "docker", "docker-compose", "nuget"],
+      "groupName": "Arbeidstilsynet.Receiver group"
     }
   ]
 }
