@@ -17,7 +17,7 @@
     {
       "matchUpdateTypes": ["pinDigest"],
       "automerge": true,
-      "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests)"
+      "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests) because it's always safe"
     },
     {
       "matchPackageNames": [
@@ -40,29 +40,31 @@
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true,
       "groupName": ".NET Testing",
-      "description": "Automerge .NET testing packages"
+      "description": "Automerge .NET testing packages because errors will be caught by CI"
     },
     {
-      "matchPackageNames": ["typescript"],
-      "automerge": true
+      "matchPackageNames": ["typescript", "@typescript/native-preview"],
+      "automerge": true,
+      "description": "Automerge TS because it's a devDependency, doesn't follow semver, and errors will be caught by CI"
     },
     {
       "matchPackageNames": ["Arbeidstilsynet.*"],
       "matchManagers": ["nuget"],
-      "groupName": "Arbeidstilsynet namespace",
-      "description": "Group internal .NET packages and disable minimum release age",
-      "minimumReleaseAge": null
+      "groupName": ".NET Arbeidstilsynet namespace",
+      "minimumReleaseAge": null,
+      "description": "Group internal .NET packages and disable minimum release age"
     },
     {
       "matchPackageNames": ["@arbeidstilsynet/*"],
       "matchManagers": ["npm"],
-      "groupName": "@arbeidstilsynet namespace",
-      "description": "Group internal NPM packages"
+      "groupName": "NPM @arbeidstilsynet scope",
+      "description": "Group internal NPM packages but keep minimum release age for PNPM compatibility"
     },
     {
       "matchDatasources": ["docker"],
       "matchSourceUrls": ["/^https:\\/\\/github.com\\/Arbeidstilsynet\\/.*$/"],
-      "minimumReleaseAge": null
+      "minimumReleaseAge": null,
+      "description": "Disable minimum release age for internal Docker images"
     },
     {
       "matchPackageNames": [
@@ -70,7 +72,8 @@
         "/^.*meldinger\\/receiver$/"
       ],
       "matchManagers": ["kubernetes", "docker", "docker-compose", "nuget"],
-      "groupName": "Arbeidstilsynet.Receiver group"
+      "groupName": "Arbeidstilsynet.Receiver group",
+      "description": "Group Receiver image and .NET client together"
     }
   ]
 }
