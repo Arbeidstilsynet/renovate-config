@@ -82,7 +82,8 @@
     {
       "matchPackageNames": [
         "Arbeidstilsynet.Receiver",
-        "/^.*meldinger\\/receiver$/"
+        "ghcr.io/arbeidstilsynet/receiver",
+        "/^.*-docker\\.pkg\\.dev\\/nais-management-.*\\/meldinger\\/receiver$/"
       ],
       "matchManagers": ["kubernetes", "docker", "docker-compose", "nuget"],
       "groupName": "Arbeidstilsynet.Receiver group",
