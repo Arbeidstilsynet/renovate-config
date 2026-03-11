@@ -10,6 +10,7 @@
     "mergeConfidence:all-badges",
     "customManagers:dockerfileVersions"
   ],
+  "timezone": "Europe/Oslo",
   "minimumReleaseAge": "96 hours",
   "semanticCommits": "enabled",
   "lockFileMaintenance": { "enabled": true },
