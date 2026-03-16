@@ -7,12 +7,14 @@
     ":automergeTesters",
     ":automergeTypes",
     ":automergeDigest",
+    ":enablePreCommit",
+    ":semanticCommits",
     "mergeConfidence:all-badges",
     "customManagers:dockerfileVersions"
   ],
   "timezone": "Europe/Oslo",
   "minimumReleaseAge": "96 hours",
-  "semanticCommits": "enabled",
+  "osvVulnerabilityAlerts": true,
   "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
