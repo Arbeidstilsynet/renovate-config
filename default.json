@@ -89,8 +89,9 @@
         "/^.*-docker\\.pkg\\.dev\\/nais-management-.*\\/meldinger\\/receiver$/"
       ],
       "matchManagers": ["kubernetes", "docker", "docker-compose", "nuget"],
+      "automerge": false,
       "groupName": "Arbeidstilsynet.Receiver group",
-      "description": "Group Receiver image and .NET client together"
+      "description": "Group Receiver image and .NET client together, disable automerge to ensure all package types are correctly updated simultaneously"
     }
   ]
 }
