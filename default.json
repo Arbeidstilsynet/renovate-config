@@ -9,8 +9,7 @@
     ":automergeDigest",
     ":enablePreCommit",
     ":semanticCommits",
-    "mergeConfidence:all-badges",
-    "customManagers:dockerfileVersions"
+    "mergeConfidence:all-badges"
   ],
   "timezone": "Europe/Oslo",
   "minimumReleaseAge": "96 hours",
