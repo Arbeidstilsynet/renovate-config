@@ -52,6 +52,21 @@
     },
     {
       "matchPackageNames": [
+        "oxc-project/mirrors-oxfmt",
+        "oxc-project/mirrors-oxlint"
+      ],
+      "matchManagers": ["pre-commit"],
+      "groupName": "OXC tools",
+      "description": "Group oxfmt and oxlint pre-commit mirrors with their npm packages"
+    },
+    {
+      "matchPackageNames": ["oxfmt", "oxlint", "oxlint-tsgolint"],
+      "matchManagers": ["npm"],
+      "groupName": "OXC tools",
+      "description": "Group oxfmt and oxlint npm packages with their pre-commit mirrors"
+    },
+    {
+      "matchPackageNames": [
         "aws-sdk*",
         "AWSSDK*",
         "@aws-sdk/**",
