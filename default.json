@@ -99,10 +99,17 @@
     {
       "matchPackageNames": [
         "Arbeidstilsynet.Receiver",
+        "@arbeidstilsynet/receiver-types",
         "ghcr.io/arbeidstilsynet/receiver",
         "/^.*-docker\\.pkg\\.dev\\/nais-management-.*\\/meldinger\\/receiver$/"
       ],
-      "matchManagers": ["kubernetes", "docker", "docker-compose", "nuget"],
+      "matchManagers": [
+        "kubernetes",
+        "docker",
+        "docker-compose",
+        "nuget",
+        "npm"
+      ],
       "automerge": false,
       "groupName": "Arbeidstilsynet.Receiver group",
       "description": "Group Receiver image and .NET client together, disable automerge to ensure all package types are correctly updated simultaneously"
