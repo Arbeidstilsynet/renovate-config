@@ -100,6 +100,7 @@
       "matchPackageNames": ["Arbeidstilsynet.Receiver"],
       "matchManagers": ["nuget"],
       "automerge": false,
+      "minimumReleaseAge": null,
       "groupName": "Arbeidstilsynet.Receiver group",
       "description": "Group Receiver .NET client with image and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
     },
@@ -107,6 +108,7 @@
       "matchPackageNames": ["@arbeidstilsynet/receiver-types"],
       "matchManagers": ["npm"],
       "automerge": false,
+      "minimumReleaseAge": null,
       "groupName": "Arbeidstilsynet.Receiver group",
       "description": "Group Receiver JS types with image and .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
     },
@@ -117,6 +119,7 @@
       ],
       "matchDatasources": ["docker"],
       "automerge": false,
+      "minimumReleaseAge": null,
       "groupName": "Arbeidstilsynet.Receiver group",
       "description": "Group Receiver image (both registries) with .NET client and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
     }
