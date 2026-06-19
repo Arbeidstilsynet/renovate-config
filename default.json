@@ -97,22 +97,28 @@
       "description": "Disable minimum release age for internal Docker images"
     },
     {
+      "matchPackageNames": ["Arbeidstilsynet.Receiver"],
+      "matchManagers": ["nuget"],
+      "automerge": false,
+      "groupName": "Arbeidstilsynet.Receiver group",
+      "description": "Group Receiver .NET client with image and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
+      "matchPackageNames": ["@arbeidstilsynet/receiver-types"],
+      "matchManagers": ["npm"],
+      "automerge": false,
+      "groupName": "Arbeidstilsynet.Receiver group",
+      "description": "Group Receiver JS types with image and .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
       "matchPackageNames": [
-        "Arbeidstilsynet.Receiver",
-        "@arbeidstilsynet/receiver-types",
         "ghcr.io/arbeidstilsynet/receiver",
         "/^.*-docker\\.pkg\\.dev\\/nais-management-.*\\/meldinger\\/receiver$/"
       ],
-      "matchManagers": [
-        "kubernetes",
-        "docker",
-        "docker-compose",
-        "nuget",
-        "npm"
-      ],
+      "matchDatasources": ["docker"],
       "automerge": false,
       "groupName": "Arbeidstilsynet.Receiver group",
-      "description": "Group Receiver image and .NET client together, disable automerge to ensure all package types are correctly updated simultaneously"
+      "description": "Group Receiver image (both registries) with .NET client and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
     }
   ]
 }
