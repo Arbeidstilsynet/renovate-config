@@ -122,6 +122,24 @@
       "minimumReleaseAge": null,
       "groupName": "Arbeidstilsynet.Receiver group",
       "description": "Group Receiver image (both registries) with .NET client and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
+      "matchPackageNames": ["Arbeidstilsynet.Brevgenerator.Client"],
+      "matchManagers": ["nuget"],
+      "automerge": false,
+      "minimumReleaseAge": null,
+      "groupName": "Arbeidstilsynet.Brevgenerator group",
+      "description": "Group Brevgenerator .NET client with its api image, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
+      "matchPackageNames": [
+        "ghcr.io/arbeidstilsynet/brevgen2-api"
+      ],
+      "matchDatasources": ["docker"],
+      "automerge": false,
+      "minimumReleaseAge": null,
+      "groupName": "Arbeidstilsynet.Brevgenerator group",
+      "description": "Group Brevgenerator api image with the .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
     }
   ]
 }
