@@ -22,6 +22,12 @@
       "description": "Automerge pinDigest PRs (e.g., GitHub Actions, Docker digests) because it's always safe"
     },
     {
+      "matchDatasources": ["docker"],
+      "matchDepNames": ["/^ghcr\\.io\\//"],
+      "minimumReleaseAgeBehaviour": "timestamp-optional",
+      "description": "Allow timestamp-less GHCR Docker releases to pass minimum release age. See https://github.com/renovatebot/renovate/issues/39064"
+    },
+    {
       "matchPackageNames": [
         "coverlet.collector",
         "Microsoft.NET.Test.Sdk",
