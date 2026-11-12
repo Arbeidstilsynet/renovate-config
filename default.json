@@ -117,7 +117,7 @@
       "description": "Group Receiver .NET client with image and JS types, disable automerge to ensure all package types are correctly updated simultaneously"
     },
     {
-      "matchPackageNames": ["@arbeidstilsynet/receiver-types"],
+      "matchPackageNames": ["@arbeidstilsynet/receiver"],
       "matchManagers": ["npm"],
       "automerge": false,
       "minimumReleaseAge": null,
