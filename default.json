@@ -152,6 +152,25 @@
       "minimumReleaseAge": null,
       "groupName": "Arbeidstilsynet.Brevgenerator group",
       "description": "Group Brevgenerator api image with the .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
+      "matchPackageNames": ["Arbeidstilsynet.Saksarkiv.Client"],
+      "matchManagers": ["nuget"],
+      "automerge": false,
+      "minimumReleaseAge": null,
+      "groupName": "Arbeidstilsynet.Saksarkivtjeneste group",
+      "description": "Group Saksarkiv api image with the .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
+    },
+    {
+      "matchPackageNames": [
+        "ghcr.io/saksarkivtjeneste/mock-saksarkiv-api",
+        "ghcr.io/saksarkivtjeneste/mock-saksarkiv-queue-consumer"
+      ],
+      "matchDatasources": ["docker"],
+      "automerge": false,
+      "minimumReleaseAge": null,
+      "groupName": "Arbeidstilsynet.Saksarkivtjeneste group",
+      "description": "Group Saksarkiv api image with the .NET client, disable automerge to ensure all package types are correctly updated simultaneously"
     }
   ]
 }
